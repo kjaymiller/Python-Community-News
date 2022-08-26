@@ -1,4 +1,4 @@
-# python_community_stream
+# Python Community News
 Content Portal for topics and stream episodes
 
 ### Watch the stream:
