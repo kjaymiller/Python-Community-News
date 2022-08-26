@@ -1,0 +1,16 @@
+{% {% extends 'base.html' %}%}
+{% block content %}
+{% for topic in topics %}
+<div>
+    <h1>{{ topic.title }}</h1>
+    <small>submitted by:{{topic.user}}</small>
+    <small>on: {{topic.date}}</small>
+    <small>tags: {{topic.tags}}</small>
+</div>
+<div>
+    <p>{{ topic.body }}</p>
+</div>
+{% endfor %}
+{% endblock %}
+"""
+{% endblock %}
