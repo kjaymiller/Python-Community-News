@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="m-5 flex justify-center items-center">
+    <img class="rounded-lg" src="static/img/logo.jpg">
+    <h1 class="font-black text-5xl mx-3">The latest news around the Python community</h1>
+</div>
+<div class="">
+    <div class="my-5">
+    <h2 class="font-thin text-3xl my-1">Check out the show!</h2>
+    <div class="m-3">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_xyKDQJxNOg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+    <div class="my-5">
+    <h2 class="font-thin text-3xl my-1">Subscribe to our newsletter</h2>
+    <form
+  action="https://buttondown.email/api/emails/embed-subscribe/python-community-news"
+  method="post"
+  target="popupwindow"
+  onsubmit="window.open('https://buttondown.email/python-community-news', 'popupwindow')"
+  class="embeddable-buttondown-form m-3 p-3 border rounded"
+>
+  <label for="bd-email">Enter your email</label>
+  <input class="border rounded" type="email" name="email" id="bd-email" />
+  <input class="bg-blue-400 text-blue-700 font-black rounded p-2" type="submit" value="Subscribe" />
+  <p>
+    <a href="https://buttondown.email" target="_blank">Powered by Buttondown.</a>
+  </p>
+</form>
+</div>
+<div class="my-5">
+    <h1 class="font-thin text-3xl my-1">What is {{SITE_TITLE}}?</h1>
+   <p class="my-2"> {{SITE_TITLE}} is a podcast, livestream, and newsletter that focuses on the <strong>Non-Pipable</strong> news in the Python Community. <strong>Learn more on our <a class="hover:underline" href="/about">About Page</a>.</strong></p>
+</div>
+</div>
+{% endblock content %}
