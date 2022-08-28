@@ -2,6 +2,7 @@
 title: Weekly Community News - {{date}}
 date: {{date}}
 tags: {{tags}}
+github: https://github.com/kjaymiller/Python-Community-News/blob/main/app/content/{{date}}.md
 ---
 
 {% for issue in issues %}
