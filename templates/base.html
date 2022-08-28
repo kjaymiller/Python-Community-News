@@ -9,6 +9,7 @@
 
 </head>
 <body>
+    <div class="flex flex-col h-screen">
     <header class="bg-blue-500 p-5">
         <div class="flex justify-between text-slate-100 items-baseline">
             <h1 class="text-2xl font-bold"><a href="/">{{SITE_TITLE}}</a></h1>
@@ -20,8 +21,8 @@
         </div>
     </header>
     <section class="md:mx-auto my-12 container px-2">
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
     </section>
     <footer class="absolute bottom-0 w-full text-slate-50 py-3 bg-slate-400 font-thin text-sm flex justify-around">
         <h4 class="text-slate-50">{{SITE_TITLE}}</h4>
@@ -29,5 +30,6 @@
         <h4 class="text-slate-50"><a class="hover:underline" href="https://github.com/kjaymiller/Python-Community-News/main/LICENSE.md" MIT Licensed</a></h4>
         <h4 class="text-slate-50"><a class="hover:underline" href="https://github.com/kjaymiller/Python-Commuunity-News">Github</a></h4>
     </footer>
+</div>
 </body>
 </html>
