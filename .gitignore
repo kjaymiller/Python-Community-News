@@ -128,3 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .direnv
+node_modules
+output
