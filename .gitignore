@@ -129,4 +129,5 @@ dmypy.json
 .pyre/
 .direnv
 node_modules
+.envrc
 output
