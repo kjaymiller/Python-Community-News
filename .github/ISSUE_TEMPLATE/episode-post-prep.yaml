@@ -7,9 +7,9 @@ body:
   - type: markdown
     attributes:
       value: "# Prior to Publishing"
-      label: "Use this checklist to walk through all the steps you'll need to complete for each episode"
   - type: checkboxes
     id: checklist
+    label: "Use this checklist to walk through all the steps you'll need to complete for each episode"
     attributes:
       options:
         - label: Download the Audio/Video from StreamYard
