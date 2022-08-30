@@ -37,6 +37,7 @@ body:
     attributes:
       label: YouTube ID
       description: The ID from YouTube which you can get from the share url.
+    validations:
       required: true
   - type: input
     id: issues
