@@ -2,6 +2,7 @@
 import os
 import pathlib
 from datetime import datetime, timedelta
+from issues import get_issues_from_github
 
 import httpx
 from jinja2 import Environment, FileSystemLoader
@@ -21,15 +22,6 @@ def get_last_friday():
     return last_friday.isoformat()
 
 
-def get_issues_from_github():
-    """Returns the issues filed in the last week"""
-    url = "https://api.github.com/repos/kjaymiller/Python-Community-News/issues"
-    since_date = get_last_friday()
-    params = {"labels": "Content", "since": since_date}
-    request = httpx.get(url, params=params)
-    return request.json()
-
-
 def create_post_for_week():
     """Creates a markdown document for this week for render_engine to process"""
     friday = (datetime.today() - timedelta(4 - datetime.today().weekday())).strftime(
@@ -37,7 +29,7 @@ def create_post_for_week():
     )
     current_week = pathlib.Path("app/content").joinpath(friday).with_suffix(".md")
     issues = get_issues_from_github()
-    template = environment.get_template("content_gen/episode_template.md")
+    template = environment.get_template("content_gen/archive.md")
     return current_week.write_text(template.render(issues=issues, date=friday))
 
 
