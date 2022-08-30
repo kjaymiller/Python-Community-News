@@ -1,0 +1,50 @@
+name: Episode Post Prep
+description: There are things that need to happen at the end of an episode
+title: "[Publish] Python Community <EPISODE NUMBER>"
+labels: publish
+assignees: ''
+body:
+  - type: markdown
+    attributes:
+      value: "# Prior to Publishing"
+  - type: checkboxes
+    id: checklist
+    attributes:
+      options:
+        - label: Download the Audio/Video from StreamYard
+        - label: Share the YouTube link with folks on social media
+        - label: Break the video into chapters
+        - label: Create Shownotes Post
+        - label: Create new Page (Render Engine)
+        - label: Publish podcast episode
+        - label: Add Github content link/podcast url/and YouTube link to content
+  - type: input
+    id: episode_date
+    attributes:
+      label: Episode Date
+      placeholder: "YYYY-MM-DD"
+      required: true
+  - type: input
+    id: shownotes_id
+    attributes:
+      label: Shownotes ID
+      description: The ID from transitor.fm which you can get from the share url.
+      required: true
+  - type: input
+    id: youtube_id
+    attribute:
+      label: YouTube ID
+      description: The ID from YouTube which you can get from the share url.
+      required: true
+  - type: input
+    id: issues
+    attributes:
+      label: Issues
+      description: The Issues covered in the episode. Use the #<ISSUE_NUMBER> format.
+      required: true
+  - type: input
+    id: newsletter_publish_date
+    attributes:
+      label: Newsletter Publish Date/Time
+      description: The date and time that the episode will be published in the newsletter.
+      placeholder: "YYYY-MM-DDTHH:MMZ"
