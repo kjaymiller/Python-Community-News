@@ -1,8 +1,3 @@
-
-url: <URL TO THE ARTICLE/TWEET/WEBSITE>
-date_published: <DATE THE THING WAS PUBLISHED>
-
-Enter a brief little summary of what this post is talking about
 name: News Topic
 description: Add a topic that you would like shared on the show and in the newsletter
 title: "[Topic]: <TITLE OF POST>"
@@ -16,6 +11,11 @@ body:
       placeholder: ex. email@example.com
     validations:
       required: true
+  - type: input
+    id: date_published
+    attributes:
+      label: When was this post released
+      description: Enter the date that this post was published.
   - type: textarea
     id: description
     attributes:
