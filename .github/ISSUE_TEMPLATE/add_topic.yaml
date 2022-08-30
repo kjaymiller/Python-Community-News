@@ -1,4 +1,4 @@
-name: News Topic
+name: Add News Topic
 description: Add a topic that you would like shared on the show and in the newsletter
 title: "[Topic]: <TITLE OF POST>"
 labels: ["Content", ""]
