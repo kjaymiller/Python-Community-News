@@ -2,7 +2,7 @@ name: Episode Post Prep
 description: There are things that need to happen at the end of an episode
 title: "[Publish] Python Community <EPISODE NUMBER>"
 labels: publish
-assignees: ''
+assignees: ['kjaymiller', 'jonafato']
 body:
   - type: markdown
     attributes:
