@@ -64,6 +64,6 @@ body:
     attributes:
       label: Conference Description
       description: Add any pertinent information about the conference e.g. focuses, topics, talk-length
-      placeholder: "tag1, tag2, tag3"
+      placeholder: "This is a general python conference with open spaces and sprints"
     validations:
       required: false
