@@ -9,8 +9,8 @@ body:
       value: "# Prior to Publishing"
   - type: checkboxes
     id: checklist
-    label: "Use this checklist to walk through all the steps you'll need to complete for each episode"
     attributes:
+      label: "Use this checklist to walk through all the steps you'll need to complete for each episode"
       options:
         - label: Download the Audio/Video from StreamYard
         - label: Share the YouTube link with folks on social media
@@ -34,7 +34,7 @@ body:
       required: true
   - type: input
     id: youtube_id
-    attribute:
+    attributes:
       label: YouTube ID
       description: The ID from YouTube which you can get from the share url.
       required: true
