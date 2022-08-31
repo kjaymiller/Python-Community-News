@@ -4,8 +4,6 @@ import os
 import datetime
 import pathlib
 import frontmatter
-from issues import parse_issue_markdown
-import re
 
 hour = str
 minute = str
@@ -64,20 +62,6 @@ def schedule_email_from_post(
          json=body,
     )
     return request
-
-
-def get_newsletter_issues(body, issues_tag: str) -> Generator[dict[str, str], None, None]:
-    """
-    Loads the issues from the file and returns the template show the newsletter.
-    """
-    md = parse_issue_markdown(body)
-
-    if issues_tag not in md:
-        raise ValueError(f"{issues_tag} is required in the issue")
-
-    issues = re.findall(r'\d+', md[issues_tag][0])
-    return issues
-    
 
 if __name__ == "__main__":
     load_newsletter_issues(34)

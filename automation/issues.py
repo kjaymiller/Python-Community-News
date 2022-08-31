@@ -4,6 +4,8 @@ from markdown_it.tree import SyntaxTreeNode
 from markdown_it import MarkdownIt
 import datetime
 import httpx
+from typing import Generator
+import re
 
 
 def get_issue(issue_id: str) -> dict[str, str]:
@@ -35,3 +37,17 @@ def parse_issue_markdown(text) -> dict:
         else:
             issue_object[issue_key].append(n.children[0].content)
     return issue_object
+
+
+def get_content_issues(body, issues_tag: str) -> Generator[dict[str, str], None, None]:
+    """
+    Loads the issues from the file and returns the template show the newsletter.
+    """
+    md = parse_issue_markdown(body)
+
+    if issues_tag not in md:
+        raise ValueError(f"{issues_tag} is required in the issue")
+
+    issues = re.findall(r'\d+', md[issues_tag][0])
+    return issues
+    

@@ -11,7 +11,6 @@ from newsletter import (
     schedule_email_from_post,
     get_show_file,
     build_email_from_content,
-    get_newsletter_issues,
 )
 
 
@@ -51,15 +50,3 @@ def test_shownotes_request_from_file(
 
 def test_newsletter_template_exists():
     assert 'newsletter.md' in engine.engine.list_templates()
-
-
-def test_malformed_newsletter_issue_raises_issue():
-    bad_issue = """### Issue Name
-There's no issues in here
-"""
-    with pytest.raises(ValueError):
-        get_newsletter_issues(bad_issue, 'Issue')
-
-
-def test_valid_issue_returns_issue_list(issue_text):
-    assert list(get_newsletter_issues(issue_text, 'Issues')) == [1,2,3,4]
