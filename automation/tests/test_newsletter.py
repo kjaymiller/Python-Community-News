@@ -3,8 +3,9 @@ import httpx
 import datetime
 import pathlib
 import json
+import engine
 
-from schedule_newsletter import (
+from newsletter import (
     get_publish_time,
     schedule_email_from_post,
     get_show_file,
@@ -44,3 +45,7 @@ def test_shownotes_request_from_file(
         request = schedule_email_from_post(newsletter_body, publish_date=publish_date)
         content = bytes.decode(httpx_mock.get_requests()[0]._content, 'utf-8')
         assert json.loads(content) == newsletter_body
+
+
+def test_newsletter_template_exists():
+    assert 'newsletter.md' in engine.engine.list_templates()
