@@ -71,7 +71,7 @@ def load_newsletter_issues(episode_issue: dict[str, str]) -> list[dict[str, str]
     """
     
     issue = get_issue(episode_issue)
-    md = parse_issue_markdown(issue)
+    md = parse_issue_markdown(issue['body'])
     print(md)
 
 
