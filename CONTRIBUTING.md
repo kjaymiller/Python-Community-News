@@ -36,7 +36,13 @@ To ensure that everyone is one the same page, please follow this process for all
         - `newsletter`
         - `website`
         - `podcast`
-3. Fork the repository on your profile and make changes locally. 
+
+3. Specify that you will work on this issue. This lets others know that someone is actively working on the project.
+4. Fork the repository on your profile and make changes locally. 
+
+#### If Wanting to Work on an Existing Issue
+
+**Claim** the issue by commenting on it or stating you will work on the issue. We will accept PRs from the first person (collaborating on an issue is encouraged).
 
 ![Create a Branch from an Issue](.github/assets/Create%20Branch.jpg)
 
