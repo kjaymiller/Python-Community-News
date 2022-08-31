@@ -13,15 +13,6 @@ header = {'Authorization': f'Token {buttondown_api_key}'}
 schedule_email_url = "https://api.buttondown.email/v1/scheduled-emails"
 
 
-def get_show_file(
-    directory: pathlib.Path,
-    date:datetime.datetime
-) -> pathlib.Path:
-    """Get the file for the last show"""
-    show_date = date.strftime("%Y-%m-%d")
-    show_file = pathlib.Path(directory).joinpath(show_date).with_suffix(".md") 
-    return show_file
-
 
 def get_publish_time(
     date:datetime.datetime,
@@ -62,6 +53,3 @@ def schedule_email_from_post(
          json=body,
     )
     return request
-
-if __name__ == "__main__":
-    load_newsletter_issues(34)

@@ -1,5 +1,4 @@
 from collections import defaultdict
-from markdown_it.presets import zero
 from markdown_it.tree import SyntaxTreeNode
 from markdown_it import MarkdownIt
 import datetime
@@ -50,4 +49,3 @@ def get_content_issues(body, issues_tag: str) -> Generator[dict[str, str], None,
 
     issues = re.findall(r'\d+', md[issues_tag][0])
     return issues
-    

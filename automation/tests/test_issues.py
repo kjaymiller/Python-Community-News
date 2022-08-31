@@ -16,6 +16,5 @@ There's no issues in here
     with pytest.raises(ValueError):
         get_content_issues(bad_issue, 'Issue')
 
-
 def test_valid_issue_returns_issue_list(issue_text):
     assert list(get_content_issues(issue_text, 'Issues')) == ["1","2","3","4"]
