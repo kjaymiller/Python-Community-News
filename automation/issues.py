@@ -6,7 +6,7 @@ import datetime
 import httpx
 
 
-def get_issue(issue_id):
+def get_issue(issue_id: str) -> dict[str, str]:
     """Returns the issue with the given id"""
     url = f"https://api.github.com/repos/kjaymiller/Python-Community-News/issues/{issue_id}" # TODO: remove hardcoded issue url
     request = httpx.get(url)
@@ -35,4 +35,3 @@ def parse_issue_markdown(text) -> dict:
         else:
             issue_object[issue_key].append(n.children[0].content)
     return issue_object
-

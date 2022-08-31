@@ -1,10 +1,11 @@
+from typing import Generator
 import httpx
 import os
 import datetime
 import pathlib
 import frontmatter
-import engine
-from issues import get_issue, parse_issue_markdown
+from issues import parse_issue_markdown
+import re
 
 hour = str
 minute = str
@@ -65,15 +66,18 @@ def schedule_email_from_post(
     return request
 
 
-def load_newsletter_issues(episode_issue: dict[str, str]) -> list[dict[str, str]]:
+def get_newsletter_issues(body, issues_tag: str) -> Generator[dict[str, str], None, None]:
     """
     Loads the issues from the file and returns the template show the newsletter.
     """
-    
-    issue = get_issue(episode_issue)
-    md = parse_issue_markdown(issue['body'])
-    print(md)
+    md = parse_issue_markdown(body)
 
+    if issues_tag not in md:
+        raise ValueError(f"{issues_tag} is required in the issue")
+
+    issues = re.findall(r'\d+', md[issues_tag][0])
+    return issues
+    
 
 if __name__ == "__main__":
     load_newsletter_issues(34)
