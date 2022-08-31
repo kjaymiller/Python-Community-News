@@ -55,8 +55,8 @@ body:
     id: conference_cfp_dates
     attributes:
       label: CFP Dates
-      description: The start and end date of the Call for Papers.
-      placeholder: "DD (MMM) -DD MMM YYYY"
+      description: The end date of the Call for Papers.
+      placeholder: "DD MMM YYYY"
     validations:
       required: false  
   - type: textarea
