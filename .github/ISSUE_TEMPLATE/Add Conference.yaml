@@ -24,7 +24,7 @@ body:
     attributes:
       label: Conference Dates
       description: The start and end date of the conference.
-      placeholder: "YYYY-MM-DD - YYYY-MM-DD"
+      placeholder: "DD (MMM) -DD MMM YYYY"
     validations:
       required: true
   - type: dropdown
@@ -55,8 +55,8 @@ body:
     id: conference_cfp_dates
     attributes:
       label: CFP Dates
-      description: The start and end date of the Call for Papers.
-      placeholder: "YYYY-MM-DD"
+      description: The end date of the Call for Papers.
+      placeholder: "DD MMM YYYY"
     validations:
       required: false  
   - type: textarea
