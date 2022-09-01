@@ -1,6 +1,6 @@
 name: Add Conference
 description: Add Conference dates, location, CFP and other information that you would like shared on the show and in the newsletter
-title: "[CONFERENCE] <CONFERENCE NAME>"
+title: "[CONFERENCE] <CONFERENCE NAME> YYYY"
 labels: ['conference']
 assignees: ['kjaymiller', 'jonafato']
 body:
