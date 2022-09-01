@@ -58,7 +58,7 @@ body:
       description: The end date of the Call for Papers.
       placeholder: "DD MMM YYYY"
     validations:
-      required: false  
+      required: false
   - type: textarea
     id: conference_description
     attributes:
