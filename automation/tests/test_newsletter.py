@@ -6,8 +6,12 @@ from tkinter import W
 import engine
 import httpx
 import pytest
-from newsletter import (build_email_from_content, get_publish_time,
-                        get_show_file, schedule_email_from_post)
+from newsletter import (
+    build_email_from_content,
+    get_publish_time,
+    get_show_file,
+    schedule_email_from_post,
+)
 
 
 def test_shownotes_date_creation(date, time):

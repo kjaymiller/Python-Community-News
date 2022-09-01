@@ -25,7 +25,7 @@ Contributing Content to Python Community News
 
 > :white_check_mark: Review the [Code of Conduct](CODE_OF_CONDUCT.md) before adding a topic or issue in general.
 
-You can add some things you want us to talk about by creating an 
+You can add some things you want us to talk about by creating an
 [issue](https://github.com/kjaymiller/Python-Community-News/issues/new/choose).
 
 ![Add a Topic](.github/assets/Add%20Topic.gif)
@@ -44,7 +44,7 @@ We cover conferences and CFPs that are focused on the following topics:
 ### To Add a Conference or CFP Announcement
 > :white_check_mark: Review the [Code of Conduct](CODE_OF_CONDUCT.md) before adding a topic or issue in general.
 
-You can add a Conference/CFP by creating an 
+You can add a Conference/CFP by creating an
 [issue](https://github.com/kjaymiller/Python-Community-News/issues/new/choose).
 
 ![Add a Conference](.github/assets/Add%20Conference.gif)
