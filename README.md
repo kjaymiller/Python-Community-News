@@ -7,7 +7,7 @@
 - https://buttondown.email/python-community-news
 ## Topics
 
-The Python
+Contributing Content to Python Community News
 
 > Non-Pipable: Any news or topic that do not result in someone needing to `pip install` something.
 
