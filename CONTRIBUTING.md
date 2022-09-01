@@ -52,7 +52,9 @@ GH Actions allow you to automate the deployment of your code to GitHub.
 
 We intend to use GitHub Actions to automate the compilation of issues to consider for the show and the creation of at show pull request.
 
-We'll also use GitHub Actions to interact with issues as they relate to the associated [Project](https://github.com/users/kjaymiller/projects/4) boards
+We'll also use GitHub Actions to interact with issues as they relate to the associated [Project](https://github.com/users/kjaymiller/projects/4) boards.
+
+Just adding a missing period here.
 
 We'll also be using GH Actions to automate sending supporting content to our newsletter service (currently [ButtonDown](https://buttondown.email/)), and perhaps other services as we see fit. 
 
