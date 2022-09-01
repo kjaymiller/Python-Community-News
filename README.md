@@ -9,7 +9,7 @@
 
 The Python
 
-> Non-Pipable: Any news or topic that do not result in someone needed to `pip install` something.
+> Non-Pipable: Any news or topic that do not result in someone needing to `pip install` something.
 
 #### Examples of great topics:
 
