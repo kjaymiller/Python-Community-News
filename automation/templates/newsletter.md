@@ -1,6 +1,6 @@
 ---
 subject: Weekly Community News - {{date}}
-github: https://github.com/kjaymiller/Python-Community-News/blob/main/app/content/{{date}}.md
+github: https://github.com/kjaymiller/Python-Community-News/blob/main/site/content/{{date}}.md
 youtube: {{youtube}}
 podcast: {{podcast}}
 ---
