@@ -14,7 +14,7 @@ The Python
 #### Examples of great topics:
 
 - Updates from the [Python Software Foundation (PSF)](https://www.python.org/psf/)
-- Posts from [Pythonistas][^1] that address a concept or thought that could be helpful to other Pythonistas.
+- Posts from Pythonistas[^1] that address a concept or thought that could be helpful to other Pythonistas.
 - General Tech News or Topics that, while not necessarily related to the Python programming language, are still important to Pythonistas.
 - Topics that related to an underrepresented group of Pythonistas.
 - Topics that focus/showcase efforts Python communmities that are often overlooked.
