@@ -1,4 +1,4 @@
-# Contributor Covenant Code of Conduct
+# Python Community News Code of Conduct
 
 ## Our Pledge
 
@@ -50,11 +50,12 @@ decisions when appropriate.
 
 ## Scope
 
-This Code of Conduct applies within all community spaces, and also applies when
-an individual is officially representing the community in public spaces.
-Examples of representing our community include using an official e-mail address,
-posting via an official social media account, or acting as an appointed
-representative at an online or offline event.
+This Code of Conduct applies within the following spaces:
+
+- On the podcast whether as a guest or in chat
+- When interacting with other community members on GitHub, our Website, or other platforms that are administered by the Python Community News Team.
+- It also applies when an individual is officially representing the community in public spaces.
+Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
 
 ## Enforcement
 
