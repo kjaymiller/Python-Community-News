@@ -1,6 +1,6 @@
 name: Add Conference
 description: Add Conference dates, location, CFP and other information that you would like shared on the show and in the newsletter
-title: "[CONFERENCE] <CONFERENCE NAME>"
+title: "[CONFERENCE] <CONFERENCE NAME> YYYY"
 labels: ['conference']
 assignees: ['kjaymiller', 'jonafato']
 body:
@@ -24,7 +24,7 @@ body:
     attributes:
       label: Conference Dates
       description: The start and end date of the conference.
-      placeholder: "YYYY-MM-DD - YYYY-MM-DD"
+      placeholder: "DD (MMM) -DD MMM YYYY"
     validations:
       required: true
   - type: dropdown
@@ -55,10 +55,10 @@ body:
     id: conference_cfp_dates
     attributes:
       label: CFP Dates
-      description: The start and end date of the Call for Papers.
-      placeholder: "YYYY-MM-DD"
+      description: The end date of the Call for Papers.
+      placeholder: "DD MMM YYYY"
     validations:
-      required: false  
+      required: false
   - type: textarea
     id: conference_description
     attributes:
