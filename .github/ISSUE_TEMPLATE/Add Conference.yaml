@@ -1,0 +1,69 @@
+name: Add Conference
+description: Add Conference dates, location, CFP and other information that you would like shared on the show and in the newsletter
+title: "[CONFERENCE] <CONFERENCE NAME>"
+labels: ['conference']
+assignees: ['kjaymiller', 'jonafato']
+body:
+  - type: input
+    id: conference_name
+    attributes:
+      label: Conference Name
+      description: The name of the conference.
+      placeholder: <CONFERENCE NAME>
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: URL
+      description: The URL of the conference.
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: input
+    id: conference_dates
+    attributes:
+      label: Conference Dates
+      description: The start and end date of the conference.
+      placeholder: "YYYY-MM-DD - YYYY-MM-DD"
+    validations:
+      required: true
+  - type: dropdown
+    id: conference_type
+    attributes:
+      label: Conference Type
+      description: Is the conference in-person online or both?
+      options: ['both', 'in-person', 'online']
+    validations:
+      required: true
+  - type: input
+    id: conference_location
+    attributes:
+      label: Conference Location
+      description: The location of the conference. Leave blank if online only
+      placeholder: "CITY, <REGION>, COUNTRY"
+    validations:
+      required: false
+  - type: input
+    id: conference_cfp_url
+    attributes:
+      label: CFP URL
+      description: The URL of the Call for Papers.
+      placeholder: https://example.com
+    validations:
+      required: false
+  - type: input
+    id: conference_cfp_dates
+    attributes:
+      label: CFP Dates
+      description: The start and end date of the Call for Papers.
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: false  
+  - type: textarea
+    id: conference_description
+    attributes:
+      label: Conference Description
+      description: Add any pertinent information about the conference e.g. focuses, topics, talk-length
+      placeholder: "This is a general python conference with open spaces and sprints"
+    validations:
+      required: false

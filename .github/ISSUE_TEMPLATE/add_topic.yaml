@@ -1,0 +1,35 @@
+name: Add News Topic
+description: Add a topic that you would like shared on the show and in the newsletter
+title: "[Topic]: <TITLE OF POST>"
+labels: ["Content", ""]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Url of the source
+      placeholder: ex. email@example.com
+    validations:
+      required: true
+  - type: input
+    id: date_published
+    attributes:
+      label: When was this post released
+      description: Enter the date that this post was published.
+  - type: textarea
+    id: description
+    attributes:
+      label: Summary
+      description: Provide a summary (2-5 sentences) of what the content is about
+      placeholder: A thing happened that will affect the Python Community
+      value: "A thing happened that will affect the Python Community"
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
