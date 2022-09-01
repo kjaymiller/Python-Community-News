@@ -14,7 +14,7 @@ jobs:
         with:
           # You can target a repository in a different organization
           # to the issue
-          project-url: https://github.com/orgs/kjaymiller/projects/4
+          project-url: https://github.com/users/kjaymiller/projects/4
           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
           labeled: bug, admin, feature, discuss
           label-operator: OR
