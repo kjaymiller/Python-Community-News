@@ -1,0 +1,39 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: requirements-txt-fixer
+        files: requirements.in
+
+  - repo: https://github.com/psf/black
+    rev: 22.8.0
+    hooks:
+      - id: black
+        name: Format Python
+        language_version: python3.10
+
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        name: Format Python imports
+        args:
+          - --profile=black
+
+  - repo: https://github.com/jazzband/pip-tools
+    rev: 6.8.0
+    hooks:
+      - id: pip-compile
+        name: Compile Python requirements
+
+
+      - id: pip-compile
+        name: Upgrade Python dependencies
+        stages: [manual]
+        args:
+          - --upgrade
