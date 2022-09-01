@@ -1,3 +1,11 @@
 httpx
 jinja2
 render_engine
+markdown_it_py
+pip-tools
+pre-commit
+pytest
+pytest-cov
+pytest-httpx
+black
+isort
