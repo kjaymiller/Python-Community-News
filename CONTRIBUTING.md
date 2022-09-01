@@ -75,7 +75,7 @@ We have to authenticate with our third-party platforms to deploy content to them
 
 If you are working on code that would connect to a Third Party, YOU MUST USE A TEST-CASE and mock the API call request and responses.
 
-We use [`httpx`](https://www.python-httpx.org) to make REST API calls to our third-party platforms and `pytest-httpx`(https://pypi.org/project/pytest-httpx/) to mock those API calls in testing.
+We use [`httpx`](https://www.python-httpx.org) to make REST API calls to our third-party platforms and [`pytest-httpx`](https://pypi.org/project/pytest-httpx/) to mock those API calls in testing.
 
 We are not taking requests to change any of the services. Solicitation of services is not allowed and will be seen as Harassment and Handled according to our [CODE of CONDUCT](CODE_OF_CONDUCT.md).
 
