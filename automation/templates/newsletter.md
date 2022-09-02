@@ -11,13 +11,13 @@
 ### CFPs
 
 {% for cfp in cfps %}
-* [{{cfp.body['conference name']}}]({{cfp.body['url']}})] (Ends: {{cfp.body['cfp dates']}})
+* [{{cfp.body.conference_name}}]({{cfp.body.url}})] (Ends: {{cfp.body.cfp_dates}})
 {% endfor %}
 
 ### Conferences
 
 {% for conf in conferences %}
-* [{{conf.body['conference name']}}]({{conf.body['url']}})] - {{conf['conference dates']}}
+* [{{conf.body.conference_name}}]({{conf.body.url}})] - {{conf.conference_dates}}
 {% endfor %}
 
 
