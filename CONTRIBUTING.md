@@ -15,6 +15,7 @@ You can break the code into essentially four parts:
   - [Before you start](#before-you-start)
   - [About the code in this project](#about-the-code-in-this-project)
     - [For All Types of Contributions](#for-all-types-of-contributions)
+      - [If Wanting to Work on an Existing Issue](#if-wanting-to-work-on-an-existing-issue)
     - [Automation with Github via GH Actions](#automation-with-github-via-gh-actions)
   - [General Administration around GitHub](#general-administration-around-github)
     - [Deployting to our third-party platforms via API](#deployting-to-our-third-party-platforms-via-api)
@@ -76,8 +77,6 @@ We have to authenticate with our third-party platforms to deploy content to them
 If you are working on code that would connect to a Third Party, YOU MUST USE A TEST-CASE and mock the API call request and responses.
 
 We use [`httpx`](https://www.python-httpx.org) to make REST API calls to our third-party platforms and [`pytest-httpx`](https://pypi.org/project/pytest-httpx/) to mock those API calls in testing.
-
-We are not taking requests to change any of the services. Solicitation of services is not allowed and will be seen as Harassment and Handled according to our [CODE of CONDUCT](CODE_OF_CONDUCT.md).
 
 ## Deploying of content to the web via Render Engine
 We want to keep an archive of our content and make it easier for people for find the show and share it with others. For that reason all of our episodes are also shared at https://pythoncommunitynews.com.
