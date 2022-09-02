@@ -1,3 +1,3 @@
-import automation.engine as engine
-import automation.issues as issues
-import automation.newsletter as newsletter
+import automation.src.engine as engine
+import automation.src.issues as issues
+import automation.src.newsletter as newsletter

@@ -4,9 +4,6 @@ import pathlib
 from datetime import datetime, timedelta
 
 from engine import engine
-from issues import get_issues_from_github
-from jinja2 import Environment, FileSystemLoader
-
 # Get the date of the next friday
 
 
