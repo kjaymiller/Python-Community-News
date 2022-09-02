@@ -1,55 +1,13 @@
+---
 name: Episode PR
 description: There are things that need to happen at the end of an episode
 title: "[PUBLISH] Python Community NEWS <EPISODE NUMBER>"
 labels: ['publish']
-body:
-  - type: markdown
-    attributes:
-      value: "# Prior to Publishing"
-  - type: checkboxes
-    id: checklist
-    attributes:
-      label: "Use this checklist to walk through all the steps you'll need to complete for each episode"
-      options:
-        - label: Download the Audio/Video from StreamYard
-        - label: Share the YouTube link with folks on social media
-        - label: Break the video into chapters
-        - label: Update Timestamps in Shownotes Post
-        - label: Publish podcast episode
-        - label: Add Github link/podcast url/and YouTube link to content
-  - type: input
-    id: episode_date
-    attributes:
-      label: Episode Date
-      placeholder: "YYYY-MM-DD"
-    validations:
-      required: true
-  - type: input
-    id: shownotes_id
-    attributes:
-      label: Shownotes ID
-      description: The ID from transitor.fm which you can get from the share url.
-    validations:
-      required: true
-  - type: input
-    id: youtube_id
-    attributes:
-      label: YouTube ID
-      description: The ID from YouTube which you can get from the share url.
-    validations:
-      required: true
-  - type: input
-    id: issues
-    attributes:
-      label: Issues
-      description: The Issues covered in the episode. Use the #<ISSUE_NUMBER> format.
-    validations:
-      required: true
-  - type: input
-    id: newsletter_publish_date
-    attributes:
-      label: Newsletter Publish Date/Time
-      description: The date and time that the episode will be published in the newsletter.
-      placeholder: "YYYY-MM-DDTHH:MMZ"
-    validations:
-      required: true
+---
+  
+# [PUBLISH] Episode Date
+
+## Episode Issue
+
+
+@kjaymiller, @jonafato
