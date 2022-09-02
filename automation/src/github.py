@@ -1,6 +1,6 @@
 import re
 from collections import defaultdict, namedtuple
-from typing import Any, Generator
+from typing import Any, Generator, Literal
 
 import os
 import httpx
@@ -11,7 +11,7 @@ Issue = namedtuple("Issue", "metadata body")
 issues:str = "issues"
 pulls:str = "pulls"
 
-def get_from_github(issue_id: str|int, request_type:issues|pulls) -> dict[str, str]:
+def get_from_github(issue_id: str|int, request_type: Literal[issues]| Literal[pulls]) -> dict[str, str]:
     """
     Returns the issue with the given id.
     The issue_id must be a valid integer.
@@ -33,7 +33,7 @@ def get_from_github(issue_id: str|int, request_type:issues|pulls) -> dict[str, s
 def get_issues(issues) -> Generator[dict[str, str], None, None]:
     """Returns the issues filed in the last week"""
     for issue in issues:
-        issue_content = get_issue(issue)
+        issue_content = get_from_github(issue, "issues")
         body = parse_issue_markdown(issue_content['body'])
         i = Issue(metadata=issue_content, body=body)
         yield i

@@ -1,3 +1,4 @@
+from collections import namedtuple
 import datetime
 import os
 import httpx
@@ -12,7 +13,7 @@ Shownotes = namedtuple("Shownotes", "subject content publish_date")
 def build_email_from_content(
     shownotes: Shownotes,
     publish_date: str,
-) -> httpx.Response
+) -> httpx.Response:
     """
     Uses frontmatter to get the subject and returns a partial of the body to be used to schedule the email.
     """
