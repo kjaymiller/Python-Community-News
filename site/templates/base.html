@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block header%}{%endblock%}{{SITE_TITLE}}</title>
+    <link rel="stylesheet" href="/static/tailwind.css" />
+
+</head>
+<body>
+    <header class="bg-blue-500 p-5">
+        <div class="flex justify-between text-slate-100 items-baseline">
+            <h1 class="text-2xl font-bold"><a href="/">{{SITE_TITLE}}</a></h1>
+            <nav class="flex justify-around">
+                <h4 class="mx-2 hover:underline"><a href="https://youtube.com/c/kjaymiller">Youtube</a></h4>
+                <h4 class="mx-2 hover:underline"><a href="https://github.com/kjaymiller/Python-Community-News">Github</a></h4>
+                <h4 class="mx-2 hover:underline"><a href="/archive">Archive</a></h4>
+            </nav>
+        </div>
+    </header>
+    <section class="md:mx-auto my-12 container px-2">
+    {% block content %}
+    {% endblock %}
+    </section>
+    <footer class="w-full text-slate-50 py-3 bg-slate-400 font-thin text-sm flex justify-around">
+        <h4 class="text-slate-50">{{SITE_TITLE}}</h4>
+        <h4 class="text-slate-50">Made with <a class="hover:underline" href="https://github.com/kjaymiller/render_engine">Render Engine</a></h4>
+        <h4 class="text-slate-50"><a class="hover:underline" href="https://github.com/kjaymiller/Python-Community-News/main/LICENSE.md" MIT Licensed</a></h4>
+        <h4 class="text-slate-50"><a class="hover:underline" href="https://github.com/kjaymiller/Python-Commuunity-News">Github</a></h4>
+    </footer>
+</body>
+</html>

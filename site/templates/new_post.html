@@ -1,0 +1,12 @@
+{%  extends 'base.html' %}
+{% block head %}{{title}} -{%endblock%}
+
+{% block content %}
+<article class="prose">
+
+<h1 class="title text-2xl font-bold">{{title}}<small class="px-3"><a href="{{github}}">[edit]</a></small></h1>
+<iframe width="100%" height="180" frameborder="no" scrolling="no" seamless src="https://share.transistor.fm/e/{{podcast}}"></iframe>
+{{content}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/{{youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</article>
+{% endblock %}
