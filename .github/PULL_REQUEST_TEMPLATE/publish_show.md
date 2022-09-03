@@ -11,6 +11,6 @@ newsletter_date: 2022-09-06T0800+8000
 ## Conference Announcements
 ### CFPs
 <ISSUES USE \#ISSUE_NUMBERS>
-  
+
 ## Conferences
 <ISSUES USE \#ISSUE_NUMBERS>
