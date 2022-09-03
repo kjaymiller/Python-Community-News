@@ -6,6 +6,6 @@
     "tailwindcss": "^3.1.8"
   },
   "scripts": {
-    "build": "tailwind build -o static/tailwind.css --minify && python site/__init__.py"
+    "build": "tailwind build -c site/tailwind.config.js -o static/tailwind.css --minify && python site/__init__.py"
   }
 }
