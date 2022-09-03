@@ -25,4 +25,8 @@ def build_email_from_content(shownotes: Shownotes,) -> httpx.Response:
         headers=header,
         json=body,
     )
+    
+    if request.status_code not in [200, 201]:
+        raise ConnectionRefusedError(f"Unable to connect: {request.json()}")
+    
     return request.json()
