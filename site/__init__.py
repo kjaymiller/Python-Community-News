@@ -21,6 +21,12 @@ if __name__ == "__main__":
     class index(Page):
         template = "index.html"
 
+    @site.render_page
+    class CoC(Page):
+        content_path = "CODE_OF_CONDUCT.md"
+        template = "markdown_page.html"
+        title = "Code of Conduct"
+
     @site.render_collection
     class archive(Blog):
         has_archive = True

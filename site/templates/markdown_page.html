@@ -1,0 +1,12 @@
+{%  extends 'base.html' %}
+{% block header %}{{title}} -{%endblock%}
+
+{% block content %}
+<article class="prose">
+
+<h1 class="title text-2xl font-bold">{{title}}<small class="px-3"></h1>
+<div class="prose">
+    {{content}}
+</div>
+</article>
+{% endblock %}
