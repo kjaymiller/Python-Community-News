@@ -1,11 +1,12 @@
 import datetime
 import re
 from collections import defaultdict
-from typing import Generator
 
-import httpx
 from markdown_it import MarkdownIt
 from markdown_it.tree import SyntaxTreeNode
+import httpx
+
+from typing import Generator
 
 
 def get_issue(issue_id: str) -> dict[str, str]:
