@@ -18,4 +18,9 @@ jobs:
         run: pip install pre-commit
 
       - name: Run pre-commit hooks
+        id: pre-commit
         run: pre-commit run --all-files
+
+      - name: Commit autoformatting changes back to pull request
+        if: always() && (steps.pre-commit.outcome == 'failure') && (github.event_name == 'pull_request')
+        run: echo "Would autoformat"
