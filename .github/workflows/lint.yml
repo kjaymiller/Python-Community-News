@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
@@ -25,5 +26,6 @@ jobs:
         if: always() && (steps.pre-commit.outcome == 'failure') && (github.event_name == 'pull_request')
         uses: devops-infra/action-commit-push@v0.9.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           commit_message: Autoformat
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          target_branch: ${{ github.head_ref }}
