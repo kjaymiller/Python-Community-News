@@ -23,4 +23,7 @@ jobs:
 
       - name: Commit autoformatting changes back to pull request
         if: always() && (steps.pre-commit.outcome == 'failure') && (github.event_name == 'pull_request')
-        run: echo "Would autoformat"
+        uses: devops-infra/action-commit-push@v0.9.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: Autoformat
