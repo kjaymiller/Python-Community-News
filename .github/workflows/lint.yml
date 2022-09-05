@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
 
       - uses: actions/setup-python@v4
         with:
@@ -28,4 +30,3 @@ jobs:
         with:
           commit_message: Autoformat
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          target_branch: ${{ github.head_ref }}
