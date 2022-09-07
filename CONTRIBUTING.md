@@ -78,8 +78,6 @@ If you are working on code that would connect to a Third Party, YOU MUST USE A T
 
 We use [`httpx`](https://www.python-httpx.org) to make REST API calls to our third-party platforms and [`pytest-httpx`](https://pypi.org/project/pytest-httpx/) to mock those API calls in testing.
 
-We are not taking requests to change any of the services. Solicitation of services is not allowed and will be seen as Harassment and Handled according to our [CODE of CONDUCT](CODE_OF_CONDUCT.md).
-
 ## Deploying of content to the web via Render Engine
 We want to keep an archive of our content and make it easier for people for find the show and share it with others. For that reason all of our episodes are also shared at https://pythoncommunitynews.com.
 
