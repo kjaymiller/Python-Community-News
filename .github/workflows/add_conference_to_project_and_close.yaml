@@ -10,7 +10,7 @@ jobs:
       
     steps:
       - name: Add conference issue to project
-      - uses: actions/add-to-project@v0.3.0
+        uses: actions/add-to-project@v0.3.0
         with:
         # You can target a repository in a different organization
         # to the issue
@@ -25,6 +25,3 @@ jobs:
         env:
          ISSUE: ${{ github.event.issue.html_url }}
          GITHUB: ${{ secrets.ADD_TO_PROJECT_PAT }}
-
-
-
