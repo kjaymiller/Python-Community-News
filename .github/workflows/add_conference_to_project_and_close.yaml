@@ -3,22 +3,13 @@ on:
   issues:
     types:
       - opened
+      - labeled
 
 jobs:
   add-to-project:
     runs-on: ubuntu-latest
       
     steps:
-      - name: Add conference issue to project
-        uses: actions/add-to-project@v0.3.0
-        with:
-        # You can target a repository in a different organization
-        # to the issue
-          project-url: https://github.com/users/kjaymiller/projects/4
-          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
-          labeled: conference
-          label-operator: OR
-
       - name: close-issue
         if: ${{ github.event.label.name == 'conference' }}
         run: gh issue comment $ISSUE --body "Thank you for adding this event! \n We'll happily consider it for the next episode. \n\n The Issue autocloses but we'll be reviewing it at https://github.com/users/kjaymiller/projects/4/views/3" && gh issue close $ISSUE
