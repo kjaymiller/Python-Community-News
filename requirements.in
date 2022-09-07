@@ -1,0 +1,12 @@
+black
+httpx
+isort
+jinja2
+markdown_it_py
+pip-tools
+pre-commit
+pytest
+pytest-cov
+pytest-httpx
+render_engine
+pytailwindcss
