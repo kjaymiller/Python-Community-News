@@ -1,0 +1,30 @@
+name: Add Conferences to the Project Tracker with Labels and close
+on:
+  issues:
+    types:
+      - opened
+    labels:
+      - conference
+
+
+jobs:
+  add-to-project:
+    name: Add admin issue to project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.3.0
+        with:
+          # You can target a repository in a different organization
+          # to the issue
+          project-url: https://github.com/users/kjaymiller/projects/4
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          labeled: conference
+          label-operator: OR
+      - run: gh issue comment $ISSUE --body "Thank you for adding this event! \n We'll happily consider it for the next episode. \n\n The Issue autocloses but we'll be reviewing it at https://github.com/users/kjaymiller/projects/4/views/3"
+      - run: gh issue close $ISSUE
+      - env:
+          ISSUE: ${{ github.event.issue.html_url }}
+          GITHUB: ${{ secrets.ADD_TO_PROJECT_PAT }}
+
+
+
