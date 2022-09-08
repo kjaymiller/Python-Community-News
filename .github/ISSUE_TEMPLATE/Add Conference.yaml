@@ -54,7 +54,7 @@ body:
   - type: input
     id: conference_cfp_dates
     attributes:
-      label: CFP Dates
+      label: CFP End Date
       description: The end date of the Call for Papers.
       placeholder: "DD MMM YYYY"
     validations:
