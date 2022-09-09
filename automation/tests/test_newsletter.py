@@ -1,7 +1,6 @@
 import datetime
 import json
 import pathlib
-from tkinter import W
 
 import httpx
 import pytest
