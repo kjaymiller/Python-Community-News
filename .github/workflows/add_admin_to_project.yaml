@@ -1,0 +1,18 @@
+name: Add add issues to project
+on:
+  issues:
+      types: [opened, edited]
+
+jobs:
+  add-to-project:
+    name: Add admin issue to project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.3.0
+        with:
+          # You can target a repository in a different organization
+          # to the issue
+          project-url: https://github.com/users/kjaymiller/projects/4
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          labeled: bug, admin, feature, discuss, content, conference
+          label-operator: OR
