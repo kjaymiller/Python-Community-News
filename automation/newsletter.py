@@ -3,7 +3,7 @@ import os
 import pathlib
 from typing import Generator
 
-import frontmatter  # type: ignore
+import frontmatter  # type: ignore[import]
 import httpx
 
 hour = str
