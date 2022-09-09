@@ -1,12 +1,9 @@
 name: Lint
 on:
-  push:
-    branches:
-      - main
   pull_request:
 
 jobs:
-  lint-with-pre-commit:
+  autoformat:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -20,13 +17,28 @@ jobs:
       - name: Install pre-commit
         run: pip install pre-commit
 
-      - name: Run pre-commit hooks
-        id: pre-commit
-        run: pre-commit run --all-files
+      - name: Run autoformatters
+        run: pre-commit run autoformat --all-files || true
 
       - name: Commit autoformatting changes back to pull request
-        if: always() && (steps.pre-commit.outcome == 'failure') && (github.event_name == 'pull_request')
         uses: devops-infra/action-commit-push@v0.9.0
         with:
           commit_message: "Autoformat via GitHub Actions"
           github_token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install pre-commit
+        run: pip install pre-commit
+
+      - name: Run linters
+        env:
+          SKIP: autoformat
+        run: pre-commit run --all-files
