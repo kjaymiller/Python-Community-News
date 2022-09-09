@@ -5,15 +5,19 @@ repos:
     rev: v4.3.0
     hooks:
       - id: trailing-whitespace
+        alias: autoformat
       - id: end-of-file-fixer
+        alias: autoformat
       - id: check-yaml
       - id: requirements-txt-fixer
+        alias: autoformat
         files: requirements.in
 
   - repo: https://github.com/psf/black
     rev: 22.8.0
     hooks:
       - id: black
+        alias: autoformat
         name: Format Python
         language_version: python3.10
 
@@ -21,6 +25,7 @@ repos:
     rev: 5.10.1
     hooks:
       - id: isort
+        alias: autoformat
         name: Format Python imports
         args:
           - --profile=black
@@ -29,6 +34,7 @@ repos:
     rev: 6.8.0
     hooks:
       - id: pip-compile
+        alias: autoformat
         name: Compile Python requirements
 
 

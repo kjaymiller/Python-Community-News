@@ -8,7 +8,7 @@ on:
 jobs:
   add-to-project:
     runs-on: ubuntu-latest
-      
+
     steps:
       - name: close-issue
         if: ${{ github.event.label.name == 'conference' }}

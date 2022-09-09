@@ -5,8 +5,8 @@ jinja2
 markdown_it_py
 pip-tools
 pre-commit
+pytailwindcss
 pytest
 pytest-cov
 pytest-httpx
 render_engine
-pytailwindcss
