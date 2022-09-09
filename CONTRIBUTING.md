@@ -14,8 +14,9 @@ You can break the code into essentially four parts:
 - [Contributing (Code) to Python Community News](#contributing-code-to-python-community-news)
   - [Before you start](#before-you-start)
   - [About the code in this project](#about-the-code-in-this-project)
-    - [For All Types of Contributions](#for-all-types-of-contributions)
-      - [If Wanting to Work on an Existing Issue](#if-wanting-to-work-on-an-existing-issue)
+  - [Contributing to the Repo](#contributing-to-the-repo)
+    - [Naming Conventions](#naming-conventions)
+    - [If Wanting to Work on an Existing Issue](#if-wanting-to-work-on-an-existing-issue)
     - [Automation with Github via GH Actions](#automation-with-github-via-gh-actions)
   - [General Administration around GitHub](#general-administration-around-github)
     - [Deployting to our third-party platforms via API](#deployting-to-our-third-party-platforms-via-api)
@@ -23,7 +24,7 @@ You can break the code into essentially four parts:
 
 You are able to contribute to all four of these parts but in different ways.
 
-### For All Types of Contributions
+## Contributing to the Repo
 To ensure that everyone is one the same page, please follow this process for all types of contributions.
 
 1. Read and follow [Code of Conduct](CODE_OF_CONDUCT.md)
@@ -41,7 +42,13 @@ To ensure that everyone is one the same page, please follow this process for all
 3. Specify that you will work on this issue. This lets others know that someone is actively working on the project.
 4. Fork the repository on your profile and make changes locally. 
 
-#### If Wanting to Work on an Existing Issue
+### Naming Conventions
+This being a python project we ask that you follow the [PEP8 naming conventions](https://peps.python.org/pep-0008/#naming-conventions). `lowercase_with_underscores` should be the default name for variables and file names. `CamelCase` should be used for classes and `UPPERCASE_WITH_UNDERSCORES` should be used for constants pull from configs/secrets/etc.
+
+Exceptions for this are:
+- when a file needs a specific name for a service we're using (i.e. `.pre-commit-config.yaml` for [pre-commit](https://pre-commit.com/)).
+- when a file is a standard for GitHub or other version control (i.e. `CONTRIBUTING.md` for GitHub).
+### If Wanting to Work on an Existing Issue
 
 **Claim** the issue by commenting on it or stating you will work on the issue. We will accept PRs from the first person (collaborating on an issue is encouraged).
 
