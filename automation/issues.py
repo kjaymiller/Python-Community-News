@@ -15,7 +15,7 @@ def get_issue(issue_id: str) -> dict[str, str]:
     return request.json()
 
 
-def get_issues(labels, since_date: str | None) -> list:
+def get_issues(labels: list[str], since_date: str | None) -> list:
     """Returns the issues filed in the last week"""
     url = "https://api.github.com/repos/kjaymiller/Python-Community-News/issues"
     params = {"labels": ",".join(labels), "since": since_date}
