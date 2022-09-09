@@ -36,9 +36,6 @@ def get_from_github(issue_id: str|int) -> dict[str, str]:
     The issue_id must be a valid integer.
     """
 
-    if request_type not in [issues, pulls]:
-        raise ValueError("type must be either: issues or pulls")
-
     url = f"https://api.github.com/repos/kjaymiller/Python-Community-News/issues/{str(issue_id)}"
     headers={
         "Authorization": f"Bearer {os.environ['GITHUB_API_TOKEN']}",
@@ -52,7 +49,7 @@ def get_from_github(issue_id: str|int) -> dict[str, str]:
 def get_issues(issues) -> Generator[dict[str, str], None, None]:
     """Returns the issues filed in the last week"""
     for issue in issues:
-        issue_content = get_from_github(issue, "issues")
+        issue_content = get_from_github(issue)
         body = parse_issue_markdown(issue_content['body'])
         i = Issue(metadata=issue_content, body=body)
         yield i
