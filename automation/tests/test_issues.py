@@ -1,4 +1,5 @@
 import pytest
+
 from automation.issues import get_content_issues, parse_issue_markdown
 
 

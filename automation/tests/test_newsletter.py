@@ -3,9 +3,10 @@ import json
 import pathlib
 from tkinter import W
 
-from automation.engine import engine
 import httpx
 import pytest
+
+from automation.engine import engine
 from automation.newsletter import (
     build_email_from_content,
     get_publish_time,
