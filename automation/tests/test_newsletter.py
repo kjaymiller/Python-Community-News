@@ -43,4 +43,4 @@ def test_shownotes_request_from_file(
 
 
 def test_newsletter_template_exists():
-    assert "newsletter.md" in engine.engine.list_templates()
+    assert "newsletter.md" in engine.list_templates()
