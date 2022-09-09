@@ -1,8 +1,6 @@
 import datetime
 import re
 from collections import defaultdict
-from typing import Generator
-
 import httpx
 from markdown_it import MarkdownIt
 from markdown_it.tree import SyntaxTreeNode
@@ -10,7 +8,7 @@ from markdown_it.tree import SyntaxTreeNode
 
 def get_issue(issue_id: str) -> dict[str, str]:
     """Returns the issue with the given id"""
-    url = f"https://api.github.com/repos/kjaymiller/Python-Community-News/issues/{issue_id}"  # TODO: remove hardcoded issue url
+    url = f"https://api.github.com/repos/kjaymiller/Python-Community-News/issues/{issue_id}"
     request = httpx.get(url)
     return request.json()
 
