@@ -1,16 +1,19 @@
-from collections import namedtuple
 import datetime
 import os
-import httpx
+from collections import namedtuple
 
+import httpx
 
 buttondown_api_key = os.getenv("BUTTONDOWN_API_KEY")
 header = {"Authorization": f"Token {buttondown_api_key}"}
 
-schedule_email_url:str = "https://api.buttondown.email/v1/scheduled-emails"
+schedule_email_url: str = "https://api.buttondown.email/v1/scheduled-emails"
 Shownotes = namedtuple("Shownotes", "subject content publish_date")
 
-def build_email_from_content(shownotes: Shownotes,) -> httpx.Response:
+
+def build_email_from_content(
+    shownotes: Shownotes,
+) -> httpx.Response:
     """
     Parse the shownotes object to build the email
     """
