@@ -1,11 +1,12 @@
+import httpx
 import pytest
+
 from automation.issues import (
     get_content_issues,
-    parse_issue_markdown,
     get_issue,
     get_issues,
+    parse_issue_markdown,
 )
-import httpx
 
 
 def test_get_issue_passes_correct_url(
@@ -13,17 +14,20 @@ def test_get_issue_passes_correct_url(
 ):
     httpx_mock.add_response(
         url="https://api.github.com/repos/kjaymiller/Python-Community-News/issues/1",
-        json={"id": 1})
+        json={"id": 1},
+    )
 
     with httpx.Client() as _:
         request = get_issue("1")
+
 
 def test_get_issues(
     httpx_mock,
 ):
     httpx_mock.add_response(
         url="https://api.github.com/repos/kjaymiller/Python-Community-News/issues?labels=test1,test2&since=2021-01-01",
-        json=[{"id": 1}])
+        json=[{"id": 1}],
+    )
 
     with httpx.Client() as _:
         request = get_issues(["test1", "test2"], "2021-01-01")
