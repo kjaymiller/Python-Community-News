@@ -1,6 +1,7 @@
 from render_engine.blog import Blog
 from render_engine.page import Page
 from render_engine.site import Site
+from jinja2 import Environment, FileSystemLoader
 
 
 class Site(Site):
@@ -10,9 +11,13 @@ class Site(Site):
         "SITE_URL": "https://pythoncommunitynews.com",
     }
 
+    engine = Environment(
+        loader=FileSystemLoader(["site/templates", "templates"])
+    )
+
 
 if __name__ == "__main__":
-    site = Site(static="static")
+    site = Site(static="./site/static")
 
     @site.render_page
     class index(Page):
@@ -22,6 +27,6 @@ if __name__ == "__main__":
     class archive(Blog):
         has_archive = True
         output_path = "./"
-        content_path = "./app/content"
+        content_path = "./site/content"
         template = "new_post.html"
         archive_template: str = "archive.html"
