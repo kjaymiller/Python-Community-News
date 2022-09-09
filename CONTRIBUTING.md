@@ -40,7 +40,7 @@ To ensure that everyone is one the same page, please follow this process for all
         - `podcast`
 
 3. Specify that you will work on this issue. This lets others know that someone is actively working on the project.
-4. Fork the repository on your profile and make changes locally. 
+4. Fork the repository on your profile and make changes locally.
 
 ### Naming Conventions
 This being a python project we ask that you follow the [PEP8 naming conventions](https://peps.python.org/pep-0008/#naming-conventions). `lowercase_with_underscores` should be the default name for variables and file names. `CamelCase` should be used for classes and `UPPERCASE_WITH_UNDERSCORES` should be used for constants pull from configs/secrets/etc.
@@ -64,14 +64,14 @@ We'll also use GitHub Actions to interact with issues as they relate to the asso
 
 Just adding a missing period here.
 
-We'll also be using GH Actions to automate sending supporting content to our newsletter service (currently [ButtonDown](https://buttondown.email/)), and perhaps other services as we see fit. 
+We'll also be using GH Actions to automate sending supporting content to our newsletter service (currently [ButtonDown](https://buttondown.email/)), and perhaps other services as we see fit.
 
 You should submit a PR for a GitHub Actions if you believe the action will improve how we interact with our existing workflow.
 
 If you would like to pose a change to the existing workflow, please file and issue and wait for aggreement from the maintainers before working on the project.
 
 ## General Administration around GitHub
-We use GitHub issues to communicate many changes that we would like to deploy to our website/podcast/newsletter and the inner workings of between them all. These may result in an issue with an `admin` label. 
+We use GitHub issues to communicate many changes that we would like to deploy to our website/podcast/newsletter and the inner workings of between them all. These may result in an issue with an `admin` label.
 
 These are often changes to issue/PR templates or documentation that communicates the intention of the project.
 
@@ -79,7 +79,7 @@ You are more than invited to work on these issues. Following the guidance given 
 
 ### Deployting to our third-party platforms via API
 
-We have to authenticate with our third-party platforms to deploy content to them and this requires an API key and often subject to rate-limiting. 
+We have to authenticate with our third-party platforms to deploy content to them and this requires an API key and often subject to rate-limiting.
 
 If you are working on code that would connect to a Third Party, YOU MUST USE A TEST-CASE and mock the API call request and responses.
 
