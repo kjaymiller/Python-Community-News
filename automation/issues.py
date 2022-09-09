@@ -15,7 +15,7 @@ def get_issue(issue_id: str) -> dict[str, str]:
     return request.json()
 
 
-def get_issues(labels, since_date: datetime.datetime | None) -> list:
+def get_issues(labels, since_date: str | None) -> list:
     """Returns the issues filed in the last week"""
     url = "https://api.github.com/repos/kjaymiller/Python-Community-News/issues"
     params = {"labels": ",".join(labels), "since": since_date}
@@ -40,7 +40,7 @@ def parse_issue_markdown(text) -> dict:
     return issue_object
 
 
-def get_content_issues(body, issues_tag: str) -> Generator[dict[str, str], None, None]:
+def get_content_issues(body, issues_tag: str) -> list[str]:
     """
     Loads the issues from the file and returns the template show the newsletter.
     """

@@ -3,13 +3,12 @@ import json
 import pathlib
 from tkinter import W
 
-import engine
+from automation.engine import engine
 import httpx
 import pytest
-from newsletter import (
+from automation.newsletter import (
     build_email_from_content,
     get_publish_time,
-    get_show_file,
     schedule_email_from_post,
 )
 
@@ -17,14 +16,6 @@ from newsletter import (
 def test_shownotes_date_creation(date, time):
     """Given a date and time, return the publish time for the email in datetime format"""
     assert get_publish_time(date, time) == datetime.datetime.combine(date, time)
-
-
-def test_shownotes_file(date, time, tmp_path):
-    """Given the date, time, and temporary_path return the filepath"""
-    publish_date = datetime.datetime.combine(date, time)
-    assert get_show_file("fake_directory", publish_date) == pathlib.Path(
-        "fake_directory"
-    ) / pathlib.Path(publish_date.strftime("%Y-%m-%d") + ".md")
 
 
 def test_shownotes_content(shownotes_text, newsletter_body, tmp_path):

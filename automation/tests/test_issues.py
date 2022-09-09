@@ -1,6 +1,5 @@
 import pytest
-from engine import engine
-from issues import get_content_issues, parse_issue_markdown
+from automation.issues import get_content_issues, parse_issue_markdown
 
 
 def test_issues_markdown_parsing(issue_text):
