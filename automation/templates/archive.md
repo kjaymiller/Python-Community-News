@@ -9,7 +9,7 @@ github: https://github.com/kjaymiller/Python-Community-News/blob/main/app/conten
 
 ## Topics
 {% for issue in issues %}
-### {{issue.metadata.title}}
+### [{{issue.metadata.title}}]({{issue.metadata.user.url}})
 
 <small>Submitted by: [{{issue.metadata.user.login}}]({{issue.metadata.user.url}}) on {{issue.metadata.created_at}}</small>
 
