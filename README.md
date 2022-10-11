@@ -1,5 +1,7 @@
 # Python Community News
-![PCN Logo](.github/assets/PCN%20Logo%20V0.16.jpg)
+## This Project has Moved to https://github.com/python-community-news
+
+To add topics for the show, visit the [Topics](https://github.com/python-community-news/topics) repo
 
 - Check out <https://pythoncommunitynews.com>
 - [Watch the Show on Twitch](https://twitch.tv/kjaymiller)
